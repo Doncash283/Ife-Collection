@@ -1,137 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Ife Collection</title>
-
-  <meta
-    name="description"
-    content="Ife Collection — beauty, fashion, accessories and home decor."
-  >
-
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-
-  <header class="topbar">
-    <p>IFE COLLECTION · CURATED WITH CARE</p>
-    <p>Orders confirmed personally on WhatsApp</p>
-  </header>
-
-  <nav class="navbar">
-
-    <a href="#" class="logo">
-      <span class="logo-mark">I</span>
-      <span>
-        <strong>Ife</strong>
-        <small>COLLECTION</small>
-      </span>
-    </a>
-
-    <div class="nav-links">
-      <a href="#shop">Shop</a>
-      <a href="#products">Products</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <button id="cartBtn" class="cart-button">
-      Bag <span id="cartCount">0</span>
-    </button>
-
-  </nav>
-
-  <main>
-
-    <section class="hero">
-
-      <div class="hero-content">
-
-        <p class="eyebrow">WELCOME TO IFE COLLECTION</p>
-
-        <h1>
-          A little more
-          <em>you</em>,
-          every day.
-        </h1>
-
-        <p class="hero-text">
-          Discover beautiful pieces for your beauty,
-          wardrobe, accessories and home.
-        </p>
-
-        <a href="#products" class="button">
-          Explore the collection →
-        </a>
-
-      </div>
-
-      <div class="hero-image"></div>
-
-    </section>
-
-
-    <section class="categories" id="shop">
-
-      <a href="#products" class="category-card beauty"
-         data-filter="Beauty">
-
-        <span>RITUALS WORTH KEEPING</span>
-        <strong>Beauty →</strong>
-
-      </a>
-
-      <a href="#products" class="category-card fashion"
-         data-filter="Fashion">
-
-        <span>PIECES WITH PRESENCE</span>
-        <strong>Fashion →</strong>
-
-      </a>
-
-      <a href="#products" class="category-card accessories"
-         data-filter="Accessories">
-
-        <span>THE FINISHING TOUCHES</span>
-        <strong>Accessories →</strong>
-
-      </a>
-
-      <a href="#products" class="category-card home"
-         data-filter="Home Decor">
-
-        <span>MAKE ROOM FOR LOVELY</span>
-        <strong>Home Decor →</strong>
-
-      </a>
-
-    </section>
-
-
-    <section class="catalog" id="products">
-
-      <div class="section-heading">
-
-        <div>
-          <p class="eyebrow">OUR COLLECTION</p>
-          <h2>Ife favourites.</h2>
         </div>
 
-        <div class="filters">
+        <div id="productGrid" class="product-grid"></div>
 
-          <button class="filter active" data-filter="All">
-            All
-          </button>
+        <div id="empty" class="empty-products" hidden>
+          <h3>No products available yet.</h3>
+          <p>Please check back soon.</p>
+        </div>
 
-          <button class="filter" data-filter="Beauty">
-            Beauty
-          </button>
+      </section>
 
-          <button class="filter" data-filter="Fashion">
-            Fashion
-          </button>
+    </main>
 
-          <button
+    <aside id="cartPanel" class="cart-panel">
+      <button id="closeCart" class="close-cart">×</button>
+
+      <h2>Your Bag</h2>
+
+      <div id="cartItems"></div>
+
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">₦0</strong>
+      </div>
+
+      <button id="checkoutBtn" class="button full-width">
+        Order on WhatsApp
+      </button>
+    </aside>
+
+    <footer>
+      <h3>Ife Collection</h3>
+      <p>Beauty · Fashion · Accessories · Home Decor</p>
+      <p>© 2026 Ife Collection</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
