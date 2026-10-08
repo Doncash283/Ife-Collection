@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: #f7f3eb;
+  --dark: #18332d;
+  --green: #31584d;
+  --soft: #e9e2d5;
+  --white: #ffffff;
+  --muted: #718079;
+  --accent: #b98268;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 5%;
+  background: var(--dark);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.navbar {
+  min-height: 82px;
+  padding: 18px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: var(--cream);
+  border-bottom: 1px solid #ddd5c8;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--dark);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 21px;
+  font-style: italic;
+}
+
+.logo strong {
+  display: block;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.logo small {
+  display: block;
+  margin-top: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.cart-button {
+  border: 1px solid var(--dark);
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 30px;
+}
+
+.cart-button span {
+  margin-left: 5px;
+  background: var(--dark);
+  color: white;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 11px;
+}
+
+.hero {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-content {
+  padding: 90px 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 7vw, 92px);
+  font-weight: normal;
+  line-height: .95;
+  max-width: 650px;
+}
+
+.hero h1 em,
+.about h2 em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.hero-text {
+  max-width: 470px;
+  margin: 30px 0;
+  font-size: 18px;
+  color: #56645e;
+}
+
+.button {
+  display: inline-block;
+  width: fit-content;
+  padding: 14px 25px;
+  background: var(--dark);
+  color: white;
+  border: 1px solid var(--dark);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  transition: .2s;
+}
+
+.button:hover {
+  background: transparent;
+  color: var(--dark);
+}
+
+.hero-image {
+  min-height: 650px;
+  background:
+    linear-gradient(rgba(24,51,45,.05), rgba(24,51,45,.05)),
+    url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 12px 5%;
+}
+
+.category-card {
+  min-height: 230px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 35, 30, .28);
+}
+
+.category-card span,
+.category-card strong {
+  position: relative;
+  z-index: 1;
+}
+
+.category-card span {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.category-card strong {
+  font-size: 27px;
+  font-weight: normal;
+}
+
+.beauty {
+  background-image: url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80");
+}
+
+.fashion {
+  background-image: url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80");
+}
+
+.accessories {
+  background-image: url("https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80");
+}
+
+.home {
+  background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80");
+}
+
+.catalog {
+  padding: 110px 5%;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.section-heading h2,
+.about h2,
+.contact h2 {
+  font-size: clamp(40px, 5vw
